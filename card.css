@@ -1,0 +1,67 @@
+.card {
+    display: flex;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+  
+.card {
+    box-sizing: content-box;
+    margin: 10px;
+    width: 600px;
+}
+  
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.589);
+}
+  
+.container {
+    padding: 2px 16px;
+}
+
+h3 {
+    font-size: 25px;
+    color: #212529;
+    text-align: center;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+h1 {
+    font-size: 40px;
+    color: #212529;
+    text-align: center;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+#cards{
+    display: none;
+}
+
+#cards.active {
+    display: block;
+    display: flex;
+    flex-direction: row;
+}
+
+#button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    box-shadow: 0 1px 5px 0 #e6e9ef;
+    background: #ffffff;
+    color: #000;
+    border-radius: 99px;
+    padding: 15px 30px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#button:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.589);
+}
+

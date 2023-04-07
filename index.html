@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./card.css" />
+<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+<h1>Monkeiana Jones GameFi</h1>
+
+    <div class="container">
+      <button class="button" id="connectButton" onclick="hideButton(this); showNFT()">
+        <img src="./img/metamask.png" alt="metamask_logo" /> Connect Wallet
+
+        <span id="loading"
+          ><span>&bull;</span><span>&bull;</span><span>&bull;</span></span
+        >
+      </button>
+
+      <div id="walletID">Your wallet is not connected yet.</div>
+    </div>
+
+    <div class="alert" id="installAlert">
+      Please install the Metamask!
+
+      <button class="button" id="reloadButton">Reload page</button>
+    </div>
+    <br><br>
+    <div class="container">
+      <button class="button" onclick="toGame()">Let's Game</button>
+    </div>
+    
+    <div class="cards" id="cards">
+    </div>
+
+    <script type="text/javascript" src="./script/connectWallet.js"></script>
+    <script type="text/javascript" src="./script/nftCard.js"></script>
+    <script>
+      function showNFT(){
+          document.getElementById('cards').classList.toggle('active');
+      }
+    </script>
+    <script>
+        function toGame() {
+          console.log(window.isConnected);
+          if (window.isConnected) {
+            window.location.href = "game.html";
+          }
+        }
+    </script>
+    <script>
+        function hideButton(x) {
+          x.style.display = 'none';
+          flag = true;
+        }
+    </script>
+
+
+</body>
+
+</html> 
